@@ -1,7 +1,7 @@
 # Instalando Arch Linux e aprendendo sobre Linux no Processo
 ==========
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/ArchLinux.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/ArchLinux.png)
 
 Requisitos
 ==========
@@ -14,7 +14,7 @@ Requisitos
 ==========
 Você pode obter a ISO de instalação do Arch na [pagina de download] (https://www.archlinux.org/download/). Como trata-se de uma distribuição Rolling Release, é gerada uma ISO atualizada mensalmente. Após obter a instalação, grave a ISO em um CD ou Pen Drive e inicie a instalação.
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/1.1.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/1.1.png)
 
 Após iniciar a instalação, verifique se você tem conexão com a internet (utilizarei conexão cabeada durante o procedimento). Teste com o seguinte comando:
 >
@@ -41,7 +41,7 @@ Inicie o Cfdisk:
 >
 	cfdisk
 A interface de particionamento é essa:
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.2.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/2.2.png)
 
 
 ### 2.1 MBR - BIOS
@@ -52,7 +52,7 @@ Será criada a seguinte partição:
 	/dev/sda2	como /			com o tamanho que desejar	
 
 No `cfdisk` deverá ficar da seguinte forma:
-![ArchLinux2](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.3.png)
+![ArchLinux2](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/2.3.png)
 
 Se tudo estiver correto grave as alterações no disco.
 
@@ -75,7 +75,7 @@ Serão criadas as seguintes partições:
 	/dev/sda2	como /			com o tamanho que desejar
 
 No `cfdisk` devera ficar da seguinte forma:
-![ArchLinux2](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.4.png)
+![ArchLinux2](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/2.4.png)
 
 Se tudo estiver correto grave as alterações no disco.
 
@@ -100,11 +100,11 @@ Execute o seguinte comando:
 
 O Download ira começar...
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/3.1.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/3.1.png)
 
 Aguarde o processo ser finalizado...
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/3.2.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/3.2.png)
 
 Em seguida devemos gerar o nosso fstab que significa File System Table, que fica localizado em /etc/fstab. Ele define como as partições do disco e outros dispositivos serão montados. 
 
@@ -120,7 +120,7 @@ Caso desejar você pode visualizar o arquivo ou editá-lo com:
 	nano /mnt/etc/fstab
 
 Arquivo gerado pelo genfstab:
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/3.3.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/3.3.png)
 
 4 - Configurando o Sistema
 ==========
@@ -130,7 +130,7 @@ Para isso devemos acessar o sistema, com o seguinte comando:
 	arch-chroot /mnt
 
 Após executar o comando deverá ficar assim:
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/4.1.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/4.1.png)
 
 Agora devemos configurar o locales, para definir o nosso idioma e layout do teclado.
 Abra o arquivo /etc/locale.gen e remova o # da frente de pt_BR.UTF-8 UTF-8, ou referente ao idioma do seu teclado.
@@ -139,7 +139,7 @@ Abra o arquivo /etc/locale.gen e remova o # da frente de pt_BR.UTF-8 UTF-8, ou r
 	locale-gen
 
 Após realizar as modificações salve o arquivo.
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/4.2.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/4.2.png)
 
 Em seguida iremos configurar o nosso idioma, criando o arquivo /etc/locale.conf (caso deseje utilizar um idioma diferente adapte o comando de acordo com o desejado).
 
@@ -149,7 +149,7 @@ Execute o comando, para definir o idioma:
 	export LANG=pt_BR.UTF-8
 
 Foi criado o arquivo com os parâmetros passados no comando:
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/4.3.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/4.3.png)
 
 Agora vamos configurar o fuso horário.
 Podem ser vistas as regiões do Brazil com o seguinte comando:
@@ -210,7 +210,7 @@ Para instalar o Refind execute:
 	pacman -S refind-efi efibootmgr
 	refind-install (Instala Refind)
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/refind.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/refind.png)
 
 6 - Configurando o Gerenciador de pacotes Pacman
 ==========
@@ -229,13 +229,13 @@ E adicione ou descomente as linhas:
 
 Deverá ficar assim:
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/6.1.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/6.1.png)
 
 Vamos tambem alterar algumas configurações do pacman, isso é opcional. Vamos deixar as cores das fontes no terminal coloridas, e utilizar um pacman na barra de progresso.
 
 Exemplo:
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/6.3.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/6.3.png)
 
 Abra o arquivo `pacman.conf` e descomente a linha Color e adicione ILoveCandy:
 Ficando assim:
@@ -247,7 +247,7 @@ Ficando assim:
 
 Dessa forma:
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/6.2.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/6.2.png)
 
 7 - Finalizando a Instalação
 ==========
@@ -308,15 +308,15 @@ Vamos reiniciar:
 
 
 Agora seu sistema está pronto para você configurar ao seu gosto!
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/print.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/print.png)
 
 Caso tenha alguma duvida, podem ser obtidas mais informações no [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide).
 
-Estamos desenvolvendo o [ALPI] (https://github.com/tiagorlampert/alpi) que permite facilitar a configuração do sistema após a instalação. Caso queira testar para automatizar a configuração do sistema, você pode obtê-lo executando os seguintes comandos:
+Estamos desenvolvendo o [ALPI] (https://github.com/trepmalogait/alpi) que permite facilitar a configuração do sistema após a instalação. Caso queira testar para automatizar a configuração do sistema, você pode obtê-lo executando os seguintes comandos:
 >
 	pacman -Sy
 	pacman -S git wget
-	git clone https://github.com/tiagorlampert/alpi.git
+	git clone https://github.com/trepmalogait/alpi.git
 	cd alpi
 	./alpi.sh
 
@@ -326,7 +326,7 @@ Estamos desenvolvendo o [ALPI] (https://github.com/tiagorlampert/alpi) que permi
 Agora serão abordados alguns tópicos importantes e básicos para o gerenciamento de pacotes no sistema.
 
 ### 9.1 Pacman
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/pacman.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/pacman.png)
 
 Pacman é o nome do gerenciador de pacotes, o objetivo dele é tornar mais facil o gerenciamento de pacotes do sistema, ele utiliza pacotes binários `.pkg.tar.xz` com o uso de um sistema de compilação chamado ABS (que será abordado mais tarde).
 
@@ -398,7 +398,7 @@ Isso é o básico para se saber como baixar e compilar um pacote manualmente do 
 
 ### 9.4 Yaourt (Yet AnOther User Repository Tool)
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/yaourt.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/yaourt.png)
 
 Como as vezes o processo de compilação e instalação de um programa do AUR pode ser muito trabalhoso, devido a sua grande quantidade de dependências. Existem algumas ferramentas que fazem todo o trabalho "pesado" para nós. E uma delas se chama Yaourt.
 
@@ -415,7 +415,7 @@ Exemplo, para atualizar o sistema:
 10 - Finalizando
 ==========
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/arch.png)
+![ArchLinux](https://github.com/trepmalogait/InstalandoArchLinux/blob/master/src/arch.png)
 
 Após instalar e configurar o básico no sistema ainda resta muita coisa para ser ajustada, é muito importante dar uma olhada em [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations). E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas você só irá aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o Arch.
 
